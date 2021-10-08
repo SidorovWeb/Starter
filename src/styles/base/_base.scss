@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-size: $font-size;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  min-height: 100vh;
+  min-width: $minWidth;
+  font-family: $p-reg;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: var(--main-bg);
+  color: var(--black);
+  overflow-wrap: normal;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+li {
+  list-style-type: none;
+}
+
+input {
+  outline: none;
+}
+
+p {
+  margin: 0;
+}
+
+picture {
+  min-height: 0;
+}
+
+a {
+  display: inline-block;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}

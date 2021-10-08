@@ -1,0 +1,21 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+	- const title = "Главная"
+	- const name = "main-page"
+
+block content
+	main.content
+		.container
+			br
+			h1 Стартовый шаблон
+			br
+			+image('img/example','1200', '480', 'Природа')
+			h2 Component card
+			include ../blocks/components/card/card.pug
+
+
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")
