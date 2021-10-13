@@ -70,3 +70,32 @@ a:focus {
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
+
+img {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  border: 0;
+  object-fit: cover;
+  object-position: center center;
+  background-color: #525252;
+}
+
+// Удалить
+h1 {
+  @include adaptive-value('font-size', 37, 25);
+  // 47 font-size
+  margin-bottom: 27 / 37 * 1em; // 27px - отступ по макету
+  line-height: 70 / 37 * 100%; // 70px - по макету
+}
+
+.test-collumn {
+  @extend .coll;
+  flex: 0 1 50%;
+  max-width: 50%;
+
+  @media (max-width: $md3) {
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
+}

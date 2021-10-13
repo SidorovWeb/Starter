@@ -12,11 +12,10 @@ $maxWidth: 1440; // ширина всего полотна
 $maxWidthContainer: 1270; // ширина всего полотна 1240px + 30px padding
 
 // media query
-// Как использовать @media (max-width: $md3 + px)
 $md1: $maxWidthContainer + 12px;
-$md2: 991.98;
-$md3: 767.98;
-$md4: 479.98;
+$md2: 991.98px;
+$md3: 767.98px;
+$md4: 479.98px;
 
 // Fonts
 $p-reg: 'ProximaNovaRegular', sans-serif;

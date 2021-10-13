@@ -1,7 +1,97 @@
-.icon {
-  display: inline-block;
-  height: 2rem;
-  width: 2rem;
+$distance: 1.5rem;
+
+.container {
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
+  padding: 0 $distance;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -$distance;
+}
+
+.coll {
+  padding: 0 $distance;
+  position: relative;
+  min-height: 0.1rem;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+.coll-1 {
+  flex: 0 1 8.33333333%;
+  max-width: 8.33333333%;
+}
+
+.coll-2 {
+  flex: 0 1 16.66666667%;
+  max-width: 16.66666667%;
+}
+
+.coll-3 {
+  flex: 0 1 25%;
+  max-width: 25%;
+}
+
+.coll-4 {
+  flex: 0 1 33.33333333%;
+  max-width: 33.33333333%;
+}
+
+.coll-5 {
+  flex: 0 1 41.66666667%;
+  max-width: 41.66666667%;
+}
+
+.coll-6 {
+  flex: 0 1 50%;
+  max-width: 50%;
+}
+
+.coll-7 {
+  flex: 0 1 58.33333333%;
+  max-width: 58.33333333%;
+}
+
+.coll-8 {
+  flex: 0 1 66.66666667%;
+  max-width: 66.66666667%;
+}
+
+.coll-9 {
+  flex: 0 1 75%;
+  max-width: 75%;
+}
+
+.coll-10 {
+  flex: 0 1 83.33333333%;
+  max-width: 83.33333333%;
+}
+
+.coll-11 {
+  flex: 0 1 91.66666667%;
+  max-width: 91.66666667%;
+}
+
+.coll-12 {
+  flex: 0 1 100%;
+  max-width: 100%;
+}
+
+// скрыть визуально, убрав с экрана, но оставив доступным для средств чтения с экрана.
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: polygon(0rem 0rem, 0rem 0rem, 0rem 0rem);
+  height: 0.1rem;
+  margin: -0.1rem;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 0.1rem;
+  white-space: nowrap;
 }
 
 // Hover effect
@@ -16,101 +106,8 @@
   }
 }
 
-// скрыть визуально, убрав с экрана, но оставив доступным для средств чтения с экрана.
-.sr-only {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap;
-}
-
-.container {
-  max-width: $maxWidthContainer + px;
-  margin: 0px auto;
-  padding: 0 15px;
-}
-
-.row {
-  @include row();
-  // 20px
-  margin-left: -1rem;
-  margin-right: -1rem;
-}
-
-.coll-1 {
-  @include coll();
-  flex: 0 1 8.33333333%;
-  max-width: 8.33333333%;
-}
-
-.coll-2 {
-  @include coll();
-  flex: 0 1 16.66666667%;
-  max-width: 16.66666667%;
-}
-
-.coll-3 {
-  @include coll();
-  flex: 0 1 25%;
-  max-width: 25%;
-}
-
-.coll-4 {
-  @include coll();
-  flex: 0 1 33.33333333%;
-  max-width: 33.33333333%;
-}
-
-.coll-5 {
-  @include coll();
-  flex: 0 1 41.66666667%;
-  max-width: 41.66666667%;
-}
-
-.coll-6 {
-  @include coll();
-  flex: 0 1 50%;
-  max-width: 50%;
-}
-
-.coll-7 {
-  @include coll();
-  flex: 0 1 58.33333333%;
-  max-width: 58.33333333%;
-}
-
-.coll-8 {
-  @include coll();
-  flex: 0 1 66.66666667%;
-  max-width: 66.66666667%;
-}
-
-.coll-9 {
-  @include coll();
-  flex: 0 1 75%;
-  max-width: 75%;
-}
-
-.coll-10 {
-  @include coll();
-  flex: 0 1 83.33333333%;
-  max-width: 83.33333333%;
-}
-
-.coll-11 {
-  @include coll();
-  flex: 0 1 91.66666667%;
-  max-width: 91.66666667%;
-}
-
-.coll-12 {
-  @include coll();
-  flex: 0 1 100%;
-  max-width: 100%;
+.icon {
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
 }
