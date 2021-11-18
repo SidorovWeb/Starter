@@ -53,14 +53,6 @@ gulp-pug-starter
 └── .gitignore
 ```
 
-## Создание БЭМ-блока - БЭМ-компонента
-
-- установите `bem-tools-core` глобально: ```yarn global add bem-tools-core`
-
-* `bem create my-block` - для создания папки БЭМ-блока, где `my-block` - имя БЭМ-блока
-* `bem create my-component -l src/blocks/components` для создания компонента
-* `bem create my-component -l src/blocks/components && bem create my-block` - создать всё вместе
-
 ### Изображения
 
 - изображения автоматически конвертируются в формат `.webp`.
