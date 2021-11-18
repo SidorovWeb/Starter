@@ -38,7 +38,6 @@ module.exports = {
                 {
                   //   debug: true,
                   corejs: '3.6.4',
-                  useBuiltIns: 'usage',
                 },
               ],
             ],

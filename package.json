@@ -30,8 +30,6 @@
     "@babel/register": "^7.9.0",
     "babel-eslint": "~10.1.0",
     "babel-loader": "^8.1.0",
-    "bem-tools-core": "bem-tools/bem-tools-core",
-    "bem-tools-create": "bem-tools/bem-tools-create",
     "browser-sync": "^2.26.12",
     "core-js": "^3.6.5",
     "del": "^5.1.0",
@@ -72,8 +70,7 @@
     "yargs": "~15.3.1"
   },
   "dependencies": {
-    "focus-visible": "^5.1.0",
-    "svg4everybody": "^2.1.9"
+    "focus-visible": "^5.1.0"
   },
   "husky": {
     "hooks": {
