@@ -1,5 +1,9 @@
 :root {
-  --vh: 100vh;
+  --primary: #0060df;
+  --secondary: #5a6268;
+  --accent: #fd6f53;
+  --danger: #c82333;
+  --warning: #ffc107;
 }
 
 // SIZE
@@ -9,10 +13,11 @@ $maxWidth: 1440; // ширина всего полотна
 
 // Как использовать max-width: $maxWidth + px;
 
-$maxWidthContainer: 1270; // ширина всего полотна 1240px + 30px padding
+$maxWidthContainerPX: 1270; // ширина всего полотна 1240px + 30px padding
+$maxWidthContainerREM: 127rem; // ширина всего полотна 1240px + 30px padding
 
 // media query
-$md1: $maxWidthContainer + 12px;
+$md1: $maxWidthContainerPX + 12px;
 $md2: 991.98px;
 $md3: 767.98px;
 $md4: 479.98px;
@@ -21,23 +26,6 @@ $md4: 479.98px;
 $p-reg: 'ProximaNovaRegular', sans-serif;
 $p-bold: 'ProximaNovaBold', sans-serif;
 $p-light: 'ProximaNovaLight', sans-serif;
-
-// color
-$primary: #0060df;
-$secondary: #5a6268;
-$accent: #fd6f53;
-$danger: #c82333;
-$warning: #ffc107;
-$main-bg: #ffffff;
-$black: #000000;
-$white: #ffffff;
-$dark: #2a333d;
-$blue: #0258b3;
-$grey: #e3e3e3;
-$bg: red;
-$bar: #ccc;
-$gradient: linear-gradient(72deg, $bar, $bg);
-$overlay: rgba(23, 35, 53, 0.8);
 
 // Other
 $transition: 225ms ease-in-out;

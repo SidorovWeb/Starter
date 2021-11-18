@@ -9,6 +9,10 @@
 
 html {
   font-size: $font-size;
+
+  @media (min-width: (1921px)) {
+    font-size: 0.5208333333333333vw;
+  }
 }
 
 body {
@@ -73,8 +77,10 @@ a:not([class]) {
 
 img {
   display: block;
+  max-width: 100%;
   width: 100%;
   min-height: 0;
+  height: 100%;
   border: 0;
   object-fit: cover;
   object-position: center center;
