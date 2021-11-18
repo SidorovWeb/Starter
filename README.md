@@ -15,7 +15,7 @@
 - `yarn run build:styles` - скомпилировать SCSS-файлы
 - `yarn run build:scripts` - собрать JS-файлы
 - `yarn run build:images` - собрать изображения
-- `yarn run build:webp` - сконвертировать изображения в формат `.webp`
+- `yarn run build:webp` - конвертировать изображения в формат `.webp`
 - `yarn run build:sprites`- собрать спрайты
 - `yarn run build:fonts` - собрать шрифты
 - `yarn run build:gzip` - собрать конфигурацию Apache
@@ -46,7 +46,6 @@ gulp-pug-starter
 ├── webpack.config.js
 ├── package.json
 ├── .babelrc.js
-├── .bemrc.js
 ├── .eslintrc.json
 ├── .stylelintrc
 ├── .stylelintignore
