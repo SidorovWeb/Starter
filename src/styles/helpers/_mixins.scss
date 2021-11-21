@@ -1,5 +1,5 @@
-@mixin adaptive-value($property, $desctop, $mob) {
-  $addSize: $desctop - $mob;
+@mixin adaptive-value($property, $desktop, $mob) {
+  $addSize: $desktop - $mob;
   $addMobileSize: $addSize + $addSize * 0.7;
 
   @media (max-width: 320px) {
@@ -15,11 +15,11 @@
   }
 
   @media (min-width: ($maxWidthContainerPX + px)) {
-    #{$property}: $desctop + px;
+    #{$property}: $desktop + px;
   }
 
   @media (min-width: (1921px)) {
-    #{$property}: $desctop * 0.1 + rem;
+    #{$property}: $desktop * 0.1 + rem;
   }
 }
 

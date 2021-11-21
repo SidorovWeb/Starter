@@ -1,7 +1,7 @@
 $distance: 1.5rem;
 
 .container {
-  max-width: $maxWidthContainerREM;
+  max-width: var(--maxWidthContainerREM);
   margin: 0 auto;
   padding: 0 $distance;
 }
@@ -110,4 +110,8 @@ $distance: 1.5rem;
   display: inline-block;
   height: 2rem;
   width: 2rem;
+}
+
+.transparent-bg {
+  background-color: transparent;
 }

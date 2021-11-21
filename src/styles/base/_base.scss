@@ -8,7 +8,7 @@
 }
 
 html {
-  font-size: $font-size;
+  font-size: var(--font-size);
 
   @media (min-width: (1921px)) {
     font-size: 0.5205622071837585vw;
@@ -22,7 +22,7 @@ body {
   text-rendering: optimizeSpeed;
   min-height: 100vh;
   min-width: $minWidth;
-  font-family: $p-reg;
+  font-family: var(--p-reg);
   font-size: 1.6rem;
   line-height: 1.5;
   background-color: var(--main-bg);
@@ -95,7 +95,7 @@ h1 {
   line-height: 70 / 37 * 100%; // 70px - по макету
 }
 
-.test-collumn {
+.test-column {
   @extend .coll;
   flex: 0 1 50%;
   max-width: 50%;

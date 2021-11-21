@@ -9,7 +9,7 @@
 //- 		img( src=`${src}.png`,width=width, height=height, alt=alt, loading="lazy" )
 
 mixin image(src,width,height,alt)
-	img( src=`${src}.webp`,width=width, height=height, alt=alt, loading="lazy" )
+	img( src=`${src}.webp`,width=width, height=height, alt=alt, loading="lazy" )&attributes(attributes)
 
 //- Одноцветные иконки.
 mixin icon-mono(name)

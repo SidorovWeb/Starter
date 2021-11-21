@@ -1,33 +1,32 @@
 :root {
+  // COLOR
   --primary: #0060df;
   --secondary: #5a6268;
   --accent: #fd6f53;
   --danger: #c82333;
   --warning: #ffc107;
   --gray: #eeeceb;
+  --black: #000;
+  --white: #fff;
+  // SIZE
+  --font-size: 10px;
+  // Fonts
+  --p-reg: 'ProximaNovaRegular', sans-serif;
+  --p-bold: 'ProximaNovaBold', sans-serif;
+  --p-light: 'ProximaNovaLight', sans-serif;
+
+  // Other
+  --transition: 225ms ease-in-out;
 }
 
-// SIZE
-$font-size: 10px;
+// SIZE CONTAINER
 $minWidth: 320px;
 $maxWidth: 1440; // ширина всего полотна
-
-// Как использовать max-width: $maxWidth + px;
-
 $maxWidthContainerPX: 1270; // ширина всего полотна 1240px + 30px padding
-$maxWidthContainerREM: 127rem; // ширина всего полотна 1240px + 30px padding
+$maxWidthContainerREM: 127rem; // 1240px + 30px padding
 
 // media query
-$md1: $maxWidthContainerPX + 12px;
+$md1: var(--maxWidthContainerPX) + 12px;
 $md2: 991.98px;
 $md3: 767.98px;
 $md4: 479.98px;
-
-// Fonts
-$p-reg: 'ProximaNovaRegular', sans-serif;
-$p-bold: 'ProximaNovaBold', sans-serif;
-$p-light: 'ProximaNovaLight', sans-serif;
-
-// Other
-$transition: 225ms ease-in-out;
-$cursor: pointer !default;
