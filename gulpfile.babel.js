@@ -19,11 +19,12 @@ const requireDir = require('require-dir'),
       dist: './dist/js/',
       watch: ['./src/blocks/**/*.js', './src/js/**/*.js'],
     },
-    images: {
-      src: ['./src/img/**/*.{jpg,jpeg,png,gif,tiff}', '!./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}'],
-      dist: './dist/img/',
-      watch: './src/img/**/*.{jpg,jpeg,png,gif}',
-    },
+    // Раскомментируйте если нужно
+    // images: {
+    //   src: ['./src/img/**/*.{jpg,jpeg,png,gif,tiff}', '!./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}'],
+    //   dist: './dist/img/',
+    //   watch: './src/img/**/*.{jpg,jpeg,png,gif}',
+    // },
     webp: {
       src: ['./src/img/**/*.{jpg,jpeg,png,tiff}', '!./src/img/favicon/*.{jpg,jpeg,png,gif}'],
       dist: './dist/img/',
@@ -73,7 +74,7 @@ export const development = gulp.series(
     'views',
     'styles',
     'scripts',
-    'images',
+    // 'images', // Раскомментируйте если нужно
     'webp',
     'svg',
     'spritesMono',
@@ -91,7 +92,7 @@ export const prod = gulp.series(
     'views',
     'styles',
     'scripts',
-    'images',
+    // 'images', // Раскомментируйте если нужно
     'webp',
     'svg',
     'spritesMono',

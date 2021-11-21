@@ -14,11 +14,16 @@
 - `yarn run build:views` - скомпилировать Pug-файлы
 - `yarn run build:styles` - скомпилировать SCSS-файлы
 - `yarn run build:scripts` - собрать JS-файлы
-- `yarn run build:images` - собрать изображения
 - `yarn run build:webp` - конвертировать изображения в формат `.webp`
 - `yarn run build:sprites`- собрать спрайты
 - `yarn run build:fonts` - собрать шрифты
 - `yarn run build:gzip` - собрать конфигурацию Apache
+
+## Команда выключена!
+
+Чтобы включить раскомментируйте строки в gulpfile.babel и gulp-tasks -> serve !
+
+- `yarn run build:images` - собрать изображения
 
 ## Файловая структура
 

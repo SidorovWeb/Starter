@@ -19,7 +19,7 @@ gulp.task('serve', () => {
   gulp.watch(paths.svg.watch, gulp.parallel('svg'))
   gulp.watch(paths.spritesMono.watch, gulp.parallel('spritesMono'))
   gulp.watch(paths.spritesMulti.watch, gulp.parallel('spritesMulti'))
-  gulp.watch(paths.images.watch, gulp.parallel('images'))
+  // gulp.watch(paths.images.watch, gulp.parallel('images')) // Раскомментируйте если нужно
   gulp.watch(paths.webp.watch, gulp.parallel('webp'))
   gulp.watch(paths.fonts.watch, gulp.parallel('fonts'))
 })
