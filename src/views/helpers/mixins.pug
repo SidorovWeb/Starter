@@ -21,6 +21,9 @@ mixin icon-multi(name)
 	svg(class="icon icon-" + name)&attributes(attributes)
 		use(xlink:href="img/sprites/sprite-multi.svg#" + name)
 
-//- Сложные изображения.
-mixin svg(name, className)
-	svg(class="svg" + ' ' + className, data-svg-name=name)
+//- НЕ СПРАЙТ
+mixin svg(name)
+	svg(width="100%", height="100%")&attributes(attributes)
+		use(xlink:href=`img/svg/${name}.svg#${name}`)
+
+//- +svg('telegram')

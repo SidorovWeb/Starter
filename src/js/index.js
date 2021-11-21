@@ -1,5 +1,4 @@
 import './modules/dragstart'
-import './modules/lazyLoadSVG'
 import 'focus-visible'
 
 window.addEventListener('DOMContentLoaded', () => {
