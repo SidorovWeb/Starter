@@ -91,8 +91,8 @@ img {
 h1 {
   @include adaptive-value('font-size', 37, 25);
   // 47 font-size
-  margin-bottom: 27 / 37 * 1em; // 27px - отступ по макету
-  line-height: 70 / 37 * 100%; // 70px - по макету
+  margin-bottom: math.div(27, 37) * 1em; // 27px - отступ по макету
+  line-height: math.div(70, 37) * 100%; // 70px - по макету
 }
 
 .test-column {

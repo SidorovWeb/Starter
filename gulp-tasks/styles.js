@@ -4,11 +4,13 @@ import { paths } from '../gulpfile.babel'
 import gulp from 'gulp'
 import gulpif from 'gulp-if'
 import rename from 'gulp-rename'
-import sass from 'gulp-sass'
-import mincss from 'gulp-clean-css'
-import groupmedia from 'gulp-group-css-media-queries'
-import autoprefixer from 'gulp-autoprefixer'
+import gulpSass from 'gulp-sass'
+import dartSass from 'sass'
+const sass = gulpSass(dartSass)
+import autoprefixer from 'autoprefixer'
 import sourcemaps from 'gulp-sourcemaps'
+import postCss from 'gulp-postcss'
+import cssnano from 'cssnano'
 import plumber from 'gulp-plumber'
 import browsersync from 'browser-sync'
 import yargs from 'yargs'
@@ -21,36 +23,12 @@ gulp.task('styles', () => {
     .src(paths.styles.src)
     .pipe(gulpif(!production, sourcemaps.init()))
     .pipe(plumber())
-    .pipe(sass())
-    .pipe(groupmedia())
+    .pipe(sass({ 'include css': true }))
     .pipe(
-      autoprefixer({
-        cascade: false,
-        grid: true,
-      })
-    )
-    .pipe(
-      gulpif(
-        production,
-        mincss({
-          // compatibility: 'ie11',
-          level: {
-            1: {
-              specialComments: 0,
-              removeEmpty: true,
-              removeWhitespace: true,
-            },
-            2: {
-              mergeMedia: true,
-              removeEmpty: true,
-              removeDuplicateFontRules: true,
-              removeDuplicateMediaBlocks: true,
-              removeDuplicateRules: true,
-              removeUnusedAtRules: false,
-            },
-          },
-        })
-      )
+      postCss([
+        autoprefixer({ grid: 'autoplace' }),
+        cssnano({ preset: ['default', { discardComments: { removeAll: true } }] }),
+      ])
     )
     .pipe(
       gulpif(
