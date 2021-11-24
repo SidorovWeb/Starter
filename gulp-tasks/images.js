@@ -38,18 +38,6 @@ gulp.task('images', () => {
             progressive: true,
             quality: 90,
           }),
-          imagemin.svgo({
-            plugins: [
-              { removeViewBox: false },
-              { removeUnusedNS: false },
-              { removeUselessStrokeAndFill: false },
-              { cleanupIDs: false },
-              { removeComments: true },
-              { removeEmptyAttrs: true },
-              { removeEmptyText: true },
-              { collapseGroups: true },
-            ],
-          }),
         ])
       )
     )

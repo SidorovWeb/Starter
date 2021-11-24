@@ -1,4 +1,18 @@
+const path = require('path')
+const webpack = require('webpack')
+
 module.exports = {
+  plugins: [
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      jquery: 'jquery',
+      'window.jquery': 'jquery',
+      $: 'jquery',
+      'window.$': 'jquery',
+    }),
+  ],
+
   entry: {
     main: './src/js/index.js',
   },
@@ -36,5 +50,11 @@ module.exports = {
         },
       },
     ],
+  },
+  resolve: {
+    alias: {
+      '%m': path.resolve(__dirname, 'src/blocks/modules'),
+      '%c': path.resolve(__dirname, 'src/blocks/components'),
+    },
   },
 }

@@ -1,5 +1,5 @@
 {
-  "name": "clear-starter",
+  "name": "starter",
   "description": "Стартовый шаблон",
   "author": "Sidorov Aleksandr",
   "repository": {
@@ -37,7 +37,6 @@
     "eslint": "^8.3.0",
     "gulp": "^4.0.2",
     "gulp-cheerio": "^1.0.0",
-    "gulp-debug": "~4.0.0",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "7.1.0",
     "gulp-plumber": "^1.2.1",
