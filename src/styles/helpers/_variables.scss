@@ -8,16 +8,15 @@
   --gray: #eeeceb;
   --black: #000;
   --white: #fff;
-  // SIZE
-  --font-size: 10px;
-  // Fonts
-  --p-reg: 'ProximaNovaRegular', sans-serif;
-  --p-bold: 'ProximaNovaBold', sans-serif;
-  --p-light: 'ProximaNovaLight', sans-serif;
-
-  // Other
-  --transition: 225ms ease-in-out;
 }
+
+$lineHeight: 1.5;
+$fontSize: 10px;
+
+// Fonts
+$proxiReg: 'ProximaNovaRegular', sans-serif;
+$proxBold: 'ProximaNovaBold', sans-serif;
+$proxLight: 'ProximaNovaLight', sans-serif;
 
 // SIZE CONTAINER
 $minWidth: 320px;
@@ -32,3 +31,6 @@ $md4: 1023.98px; // 1024
 $md5: 991.98px; // 992
 $md6: 767.98px; // 768
 $md7: 479.98px; // 480
+
+// Other
+$transition: 225ms ease-in-out;
