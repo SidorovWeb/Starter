@@ -77,22 +77,31 @@ a:not([class]) {
 
 img {
   display: block;
-  max-width: 100%;
-  width: 100%;
+  width: auto;
+  height: auto;
   min-height: 0;
-  height: 100%;
   border: 0;
-  object-fit: cover;
-  object-position: center center;
-  background-color: var(--gray);
 }
+
+.img-fluid {
+  img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+// 37 font-size
+// @include adaptive-value('font-size', 37, 25);
+// margin-bottom: math.div(27, 37) * 1em; // 27px - отступ по макету
+// line-height: math.div(70, 37) * 100%; // 70px - по макету
 
 // Удалить
 h1 {
   @include adaptive-value('font-size', 37, 25);
-  // 47 font-size
-  margin-bottom: math.div(27, 37) * 1em; // 27px - отступ по макету
-  line-height: math.div(70, 37) * 100%; // 70px - по макету
+  margin-bottom: math.div(27, 37) * 1em;
+  line-height: math.div(70, 37) * 100%;
 }
 
 .test-column {
@@ -100,7 +109,7 @@ h1 {
   flex: 0 1 50%;
   max-width: 50%;
 
-  @media (max-width: $md3) {
+  @media (max-width: $md6) {
     flex: 0 1 100%;
     max-width: 100%;
   }

@@ -21,12 +21,14 @@
 
 // SIZE CONTAINER
 $minWidth: 320px;
-$maxWidth: 1440; // ширина всего полотна
-$maxWidthContainerPX: 1270; // ширина всего полотна 1240px + 30px padding
+$maxWidth: 1270; // ширина всего полотна 1240px + 30px padding
 $maxWidthContainerREM: 127rem; // 1240px + 30px padding
 
 // media query
-$md1: var(--maxWidthContainerPX) + 12px;
-$md2: 991.98px;
-$md3: 767.98px;
-$md4: 479.98px;
+$md1: 1439.98px; // 1440
+$md2: 1365.98px; // 1366
+$md3: 1279.98px; // 1280
+$md4: 1023.98px; // 1024
+$md5: 991.98px; // 992
+$md6: 767.98px; // 768
+$md7: 479.98px; // 480
