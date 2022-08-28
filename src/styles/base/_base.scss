@@ -8,28 +8,24 @@
 }
 
 html {
-  font-size: $fontSize;
-
-  @media (min-width: (1921px)) {
-    font-size: 0.5205622071837585vw;
-  }
+  font-size: var(--fs);
 }
 
 body {
   display: flex;
   flex-direction: column;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
   min-height: 100vh;
   min-width: $minWidth;
-  font-family: $proxiReg;
   font-size: 1.6rem;
-  line-height: $lineHeight;
-  background-color: var(--main-bg);
+  line-height: var(--lh);
+  font-family: var(--proxiReg);
   color: var(--black);
+  background-color: var(--main-bg);
   overflow-wrap: normal;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeSpeed;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -75,6 +71,15 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #fff;
+}
+
 img {
   display: block;
   width: 100%;
@@ -94,12 +99,13 @@ img {
 
 // 37 font-size
 // @include adaptive-value('font-size', 37, 25);
+// адаптивные свойства
 // margin-bottom: math.div(27, 37) * 1em; // 27px - отступ по макету
 // line-height: math.div(70, 37) * 100%; // 70px - по макету
 
 // Удалить
 h1 {
-  @include adaptive-value('font-size', 37, 25);
+  @include adaptiveValue('font-size', 37, 25);
   margin-bottom: math.div(27, 37) * 1em;
   line-height: math.div(70, 37) * 100%;
 }

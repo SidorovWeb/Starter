@@ -1,16 +1,15 @@
 'use strict'
 
-import { paths } from '../gulpfile.babel'
+import { paths } from '../gulpfile.js'
 import gulp from 'gulp'
 import browsersync from 'browser-sync'
 
-gulp.task('serve', () => {
+gulp.task('serve', (done) => {
   browsersync.init({
     server: './dist/',
     // port: 4000,
-    // browser: 'google chrome',
-    open: false,
-    notify: false,
+    // open: false,
+    notify: true,
   })
 
   gulp.watch(paths.views.watch, gulp.parallel('views'))
@@ -19,7 +18,9 @@ gulp.task('serve', () => {
   gulp.watch(paths.svg.watch, gulp.parallel('svg'))
   gulp.watch(paths.spritesMono.watch, gulp.parallel('spritesMono'))
   gulp.watch(paths.spritesMulti.watch, gulp.parallel('spritesMulti'))
-  // gulp.watch(paths.images.watch, gulp.parallel('images')) // Раскомментируйте если нужно
+  gulp.watch(paths.images.watch, gulp.parallel('images'))
   gulp.watch(paths.webp.watch, gulp.parallel('webp'))
   gulp.watch(paths.fonts.watch, gulp.parallel('fonts'))
+
+  return done()
 })

@@ -1,4 +1,4 @@
-@mixin adaptive-value($property, $desktop, $mob) {
+@mixin adaptiveValue($property, $desktop, $mob) {
   $addSize: $desktop - $mob;
   $addMobileSize: $addSize + $addSize * 0.7;
 
@@ -7,14 +7,14 @@
   }
 
   @media (max-width: $md6) {
-    #{$property}: calc(#{$mob + px} + #{$addMobileSize} * ((100vw - 320px) / #{$maxWidth}));
+    #{$property}: calc(#{$mob + px} + #{$addMobileSize} * ((100vw - 320px) / #{$maxWidthForMediaQuery}));
   }
 
   @media (min-width: $md6) {
-    #{$property}: calc(#{$mob + px} + #{$addSize} * (100vw / #{$maxWidth}));
+    #{$property}: calc(#{$mob + px} + #{$addSize} * (100vw / #{$maxWidthForMediaQuery}));
   }
 
-  @media (min-width: ($maxWidth + px)) {
+  @media (min-width: $maxWidth) {
     #{$property}: $desktop + px;
   }
 

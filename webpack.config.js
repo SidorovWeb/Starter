@@ -1,22 +1,8 @@
-const path = require('path')
-const webpack = require('webpack')
-
-module.exports = {
-  plugins: [
-    new webpack.ProvidePlugin({
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
-      jquery: 'jquery',
-      'window.jquery': 'jquery',
-      $: 'jquery',
-      'window.$': 'jquery',
-    }),
-  ],
-
+export default {
   entry: {
     main: './src/js/index.js',
   },
-  performance: { hints: false },
+
   output: {
     filename: '[name].js',
     chunkFilename: '[name].js',
@@ -24,7 +10,6 @@ module.exports = {
   },
 
   optimization: {
-    minimize: false,
     splitChunks: {
       cacheGroups: {
         vendor: {
@@ -40,21 +25,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules\/(?!(dom7|swiper)\/).*/,
+        test: /\.m?js$/,
+        // exclude: /node_modules\/(?!(dom7|swiper)\/).*/,
+        exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [['@babel/preset-env']],
+            presets: ['@babel/preset-env'],
           },
         },
       },
     ],
-  },
-  resolve: {
-    alias: {
-      '%m': path.resolve(__dirname, 'src/blocks/modules'),
-      '%c': path.resolve(__dirname, 'src/blocks/components'),
-    },
   },
 }

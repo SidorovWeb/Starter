@@ -1,5 +1,5 @@
-import 'focus-visible'
-import './modules/dragstart'
+import 'focus-visible/dist/focus-visible.js'
+import './modules/dragstart.js'
 
 window.addEventListener('DOMContentLoaded', () => {
   // CODE

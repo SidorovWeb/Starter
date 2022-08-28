@@ -8,20 +8,18 @@
   --gray: #eeeceb;
   --black: #000;
   --white: #fff;
+  --fs: 10px;
+  --lh: 1.5;
+  // Fonts
+  --proxiReg: 'ProximaNovaRegular', sans-serif;
+  --proxBold: 'ProximaNovaBold', sans-serif;
+  --proxLight: 'ProximaNovaLight', sans-serif;
 }
-
-$lineHeight: 1.5;
-$fontSize: 10px;
-
-// Fonts
-$proxiReg: 'ProximaNovaRegular', sans-serif;
-$proxBold: 'ProximaNovaBold', sans-serif;
-$proxLight: 'ProximaNovaLight', sans-serif;
 
 // SIZE CONTAINER
 $minWidth: 320px;
-$maxWidth: 1270; // ширина всего полотна 1240px + 30px padding
-$maxWidthContainerREM: 127rem; // 1240px + 30px padding
+$maxWidth: 1270px; // ширина всего полотна 1240px + 30px padding
+$maxWidthForMediaQuery: 1270; // ширина для всего полотна медиа запрос
 
 // media query
 $md1: 1439.98px; // 1440
