@@ -1,0 +1,6 @@
+@function percent($sizeByLayout, $fontSizeElement) {
+  // $sizeByLayout - отступ по макету
+  // $fontSizeElement - размер шрифта элемента
+
+  @return math.div(27, 37) * 1em;
+}

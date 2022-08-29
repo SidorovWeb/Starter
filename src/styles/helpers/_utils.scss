@@ -1,19 +1,29 @@
-$distance: 1.5rem;
-
 .container {
-  max-width: $maxWidth;
+  width: 100%;
+  max-width: var(--maxWidth);
   margin: 0 auto;
-  padding: 0 $distance;
+  padding: 0 var(--paddingContainer);
+  @include max-1280 {
+    padding: 0 24px;
+  }
+
+  @include max-992 {
+    padding: 0 14px;
+  }
+
+  @include max-768 {
+    padding: 0 10px;
+  }
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -$distance;
+  margin: 0 calc(var(--paddingContainer) * -1);
 }
 
 .coll {
-  padding: 0 $distance;
+  padding: 0 var(--paddingContainer);
   position: relative;
   min-height: 0.1rem;
   box-sizing: border-box;
@@ -95,14 +105,17 @@ $distance: 1.5rem;
 }
 
 // Hover effect
-.hover {
-  transition: box-shadow 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
-  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.04);
 
-  &:hover {
-    transform: translateY(-0.4rem);
-    transition-delay: 0s !important;
-    box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.09);
+@include hover {
+  .hover {
+    transition: box-shadow 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.04);
+
+    &:hover {
+      transform: translateY(-0.4rem);
+      transition-delay: 0s !important;
+      box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.09);
+    }
   }
 }
 
@@ -114,4 +127,19 @@ $distance: 1.5rem;
 
 .transparent-bg {
   background-color: transparent;
+}
+
+.img-icon {
+  img {
+    width: auto;
+    height: auto;
+  }
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.bold {
+  font-weight: bold;
 }

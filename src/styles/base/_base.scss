@@ -8,14 +8,14 @@
 }
 
 html {
-  font-size: var(--fs);
+  font-size: 10px;
 }
 
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  min-width: $minWidth;
+  min-width: var(--minWidth);
   font-size: 1.6rem;
   line-height: var(--lh);
   font-family: var(--proxiReg);
@@ -24,6 +24,8 @@ body {
   overflow-wrap: normal;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeSpeed;
   scroll-behavior: smooth;
 }
@@ -62,9 +64,11 @@ a {
   text-decoration: none;
 }
 
-a:hover,
-a:focus {
-  text-decoration: none;
+@include hover {
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
 }
 
 a:not([class]) {
@@ -90,24 +94,11 @@ img {
   object-position: center center;
 }
 
-.img-icon {
-  img {
-    width: auto;
-    height: auto;
-  }
-}
-
-// 37 font-size
-// @include adaptive-value('font-size', 37, 25);
-// адаптивные свойства
-// margin-bottom: math.div(27, 37) * 1em; // 27px - отступ по макету
-// line-height: math.div(70, 37) * 100%; // 70px - по макету
-
 // Удалить
 h1 {
   @include adaptiveValue('font-size', 37, 25);
-  margin-bottom: math.div(27, 37) * 1em;
-  line-height: math.div(70, 37) * 100%;
+  margin-bottom: percent(27, 37);
+  line-height: percent(70, 37);
 }
 
 .test-column {
@@ -115,7 +106,7 @@ h1 {
   flex: 0 1 50%;
   max-width: 50%;
 
-  @media (max-width: $md6) {
+  @include max-992 {
     flex: 0 1 100%;
     max-width: 100%;
   }
