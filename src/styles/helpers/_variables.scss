@@ -1,27 +1,26 @@
-:root {
-  // COLOR
-  --accent: #60a5fa;
-  --accent-900: #2563eb;
-  --accent-800: #3a82f6;
-  --gray: #eeeceb;
-  --black: #000000;
-  --white: #ffffff;
-  --defaultFs: 10px;
-  --lh: 1.5;
+// COLOR
+$main-bg: #ffffff;
+$accent: #60a5fa;
+$accent-900: #2563eb;
+$accent-800: #3a82f6;
+$gray: #eeeceb;
+$black: #000000;
+$white: #ffffff;
+$defaultFs: 10px;
+$lh: 1.5;
 
-  // Fonts
-  --proxiReg: 'ProximaNovaRegular', sans-serif;
-  --proxBold: 'ProximaNovaBold', sans-serif;
-  --proxLight: 'ProximaNovaLight', sans-serif;
+// Fonts
+$proxiReg: 'ProximaNovaRegular', sans-serif;
+$proxBold: 'ProximaNovaBold', sans-serif;
+$proxLight: 'ProximaNovaLight', sans-serif;
 
-  // SIZE CONTAINER
-  --minWidth: 320px;
-  --maxWidth: 1270px; // ширина всего полотна 1240px + 30px padding
-  --paddingContainer: 30px;
+// SIZE CONTAINER
+$minWidth: 320px;
+$maxWidth: 1270px; // ширина всего полотна 1240px + 30px padding
+$paddingContainer: 30px;
 
-  // Other
-  --transition: 225ms ease;
-}
+// Other
+$transition: 225ms ease;
 
 $maxWidthForMediaQuery: 1270; // ширина для всего полотна медиа запрос
 

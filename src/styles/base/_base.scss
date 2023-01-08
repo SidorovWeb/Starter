@@ -15,12 +15,12 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  min-width: var(--minWidth);
+  min-width: $minWidth;
   font-size: 1.6rem;
-  line-height: var(--lh);
-  font-family: var(--proxiReg);
-  color: var(--black);
-  background-color: var(--main-bg);
+  line-height: $lh;
+  font-family: $proxiReg;
+  color: $black;
+  background-color: $main-bg;
   overflow-wrap: normal;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
@@ -80,7 +80,7 @@ a:not([class]) {
 }
 
 ::selection {
-  background-color: var(--accent);
+  background-color: $accent;
   color: #fff;
 }
 

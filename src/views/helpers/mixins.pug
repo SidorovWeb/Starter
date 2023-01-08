@@ -1,25 +1,21 @@
-//- mixin jpg(src,width,height,alt)
-//- 	picture
-//- 		source(srcset=`${src}.webp`, type='image/webp')
-//- 		img( src=`${src}.jpg`,width=width, height=height, alt=alt, loading="lazy" )
-
-//- mixin png(src,width,height,alt)
-//- 	picture
-//- 		source(srcset=`${src}.webp`, type='image/webp')
-//- 		img( src=`${src}.png`,width=width, height=height, alt=alt, loading="lazy" )
+mixin picture(src,width,height,alt,png)
+	if png
+		picture
+			source(srcset=`${src}.webp`, type='image/webp')
+			img( src=`${src}.png`,width=width, height=height, alt=alt, loading="lazy" )
+	else
+		picture
+			source(srcset=`${src}.webp`, type='image/webp')
+			img( src=`${src}.jpg`,width=width, height=height, alt=alt, loading="lazy" )
 
 mixin image(src,width,height,alt)
-	img( src=`${src}.webp`,width=width, height=height, alt=alt, loading="lazy" )&attributes(attributes)
+	img( src=`${src}.jpg`,width=width, height=height, alt=alt, loading="lazy" )
 
-//- Одноцветные иконки.
-mixin icon-mono(name)
-	svg(class="icon icon-" + name)&attributes(attributes)
-		use(xlink:href="img/sprites/sprite-mono.svg#" + name)
 
-//- Цветные иконки.
-mixin icon-multi(name)
+mixin icon(name)
 	svg(class="icon icon-" + name)&attributes(attributes)
-		use(xlink:href="img/sprites/sprite-multi.svg#" + name)
+		use(xlink:href="img/svg-sprite/svg-sprite.svg#" + name)
+
 
 //- НЕ СПРАЙТ
 mixin svg(name)

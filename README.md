@@ -33,9 +33,7 @@ gulp-pug-starter
 │   ├── fonts
 │   ├── img
 │   │   │── favicons
-│   │   ├── sprites
-│   │   │   │── sprite-mono
-│   │   │   └── sprite-multi
+│   │   ├── svg-sprite
 │   │   └── svg
 │   ├── js
 │   ├── mail

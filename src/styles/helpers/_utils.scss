@@ -1,8 +1,8 @@
 .container {
   width: 100%;
-  max-width: var(--maxWidth);
+  max-width: $maxWidth;
   margin: 0 auto;
-  padding: 0 var(--paddingContainer);
+  padding: 0 $paddingContainer;
   @include max-1280 {
     padding: 0 24px;
   }
@@ -19,11 +19,11 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 calc(var(--paddingContainer) * -1);
+  margin: 0 calc($paddingContainer * -1);
 }
 
 .coll {
-  padding: 0 var(--paddingContainer);
+  padding: 0 $paddingContainer;
   position: relative;
   min-height: 0.1rem;
   box-sizing: border-box;
@@ -137,7 +137,7 @@
 }
 
 .text-white {
-  color: var(--white);
+  color: $white;
 }
 
 .bold {
