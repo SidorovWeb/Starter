@@ -1,2 +1,12 @@
-h3 Page not found
-a(href="/", title="title") to index
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+  - const title = "404"
+  - const name = "404-page"
+
+block content
+  main.content
+    .container
+      h3 Page not found
+      a(href="/", title="title") to index

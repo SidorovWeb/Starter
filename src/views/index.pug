@@ -2,27 +2,27 @@ extends layouts/default
 include helpers/mixins
 
 block variables
-	- const title = "Главная"
-	- const name = "main-page"
+  - const title = "Главная"
+  - const name = "main-page"
 
 block content
-	main.content
-		.container
-			br
-			h1 Стартовый шаблон
-			.row
-				.test-column
-					+picture('img/1','1200', '480', 'Природа')
-				.test-column
-					|	Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Снова, последний родного решила но ему безорфографичный текстами знаках продолжил заголовок бросил от всех вдали 	пустился выйти страна своего путь обеспечивает.Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Снова, последний родного решила но ему безорфографичный текстами знаках продолжил заголовок бросил от всех вдали пустился выйти страна своего путь обеспечивает.
-			button( type="button").btn.text-white.bold  Кнопка
-			+icon('vk')
-			+icon('youtube')
-			+icon('close')
-			+icon('arrow')
-			//- Подключение компонента card
-			//- include ../blocks/components/card/card.pug
+  main.content
+    .container
+      br
+      h1 Стартовый шаблон
+      .row
+        .test-column
+          +picture('img/1','1200', '480', 'Природа')
+        .test-column
+          |	Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Снова, последний родного решила но ему безорфографичный текстами знаках продолжил заголовок бросил от всех вдали 	пустился выйти страна своего путь обеспечивает.Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Снова, последний родного решила но ему безорфографичный текстами знаках продолжил заголовок бросил от всех вдали пустился выйти страна своего путь обеспечивает.
+      button( type="button").btn.text-white.bold  Кнопка
+      +icon('vk')
+      +icon('youtube')
+      +icon('close')
+      +icon('arrow')
+      //- Подключение компонента card
+      //- include ../blocks/components/card/card.pug
 
 block scripts
-	script(src="js/main.js")
-	script(src="js/vendor.js")
+  script(src="js/main.js")
+  script(src="js/vendor.js")
